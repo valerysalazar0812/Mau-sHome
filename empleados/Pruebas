@@ -1,0 +1,22 @@
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.8.1/css/bootstrap-select.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.8.1/js/bootstrap-select.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+<select class="selectpicker" multiple data-live-search="true">
+  <option>Mustard</option>
+  <option>Ketchup</option>
+  <option>Relish</option>
+</select> 
+productos
+//////////////////////////////////////////////////////////////////////////////////////
+
+<<<<<<< HEAD
+
+
+
+TERMINAR PROYECTO XDdxdxdxd
+=======
+HOLA PERRAS
+>>>>>>> f5cee1ee7a6ae9f12bb5fd0f69b612fa7d694ecc
