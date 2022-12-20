@@ -17,6 +17,7 @@
   <link rel="stylesheet" href="../plugins/icheck-bootstrap/icheck-bootstrap.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="../dist/css/adminlte.min.css">
+  <link rel="stylesheet" href="./Css/Login.css">
   
 </head>
 
@@ -89,6 +90,18 @@
     </div>
     <center><a href="../empleados/login2.php" type="button" class="btn btn-outline-info"><b>Ingresar Empleado</b></a></center>
   </div>
+  <div id="container">
+	<h2>Mau's Home</h2>
+	<p>Iniciar Sesion</p>
+	<form>
+		<input type="email" placeholder="Correo electronico" required>
+			<br>
+		<br>
+		<input type="email" placeholder="Contraseña" required>
+		<br>
+		<button>Iniciar Sesion</button>
+	</form>
+</div>
 <!-- Button trigger modal -->
   <!-- /.login-box -->
 
