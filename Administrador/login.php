@@ -38,7 +38,6 @@
         <center><b style="color:black">BIENVENIDOS</b></center>
         <p class="login-box-msg"><b>Ingresar sesion</b></p>
 
-        
         <form method="post">
           <div class="input-group mb-3">
             <input type="email" class="form-control" placeholder="Correo" name="emailadmin">
@@ -64,14 +63,12 @@
       <center><a href="../empleados/login2.php" type="button" class="btn btn-outline-info"><b>Ingresar Empleado</b></a></center>
     </div>
     <div id="container" class="tamano">
+
     <?php
         if (isset($_REQUEST['Ingresar'])) {
           session_start();
           $email = $_REQUEST['emailadmin'] ?? '';
           $passwordd = $_REQUEST['paswordadmin'] ?? '';
-
-
-
           $pasword = $_POST['paswordadmin'];
           $pasword = sha1($_POST['paswordadmin']);
 
@@ -102,12 +99,12 @@
       <h2>Mau's Home</h2>
       <p>Iniciar Sesion</p>
       <form>
-        <input type="email" placeholder="Correo electronico" required>
+        <input type="email" placeholder="Correo" name="emailadmin" required>
         <br>
         <br>
-        <input type="email" placeholder="Contraseña" required>
+        <input type="password" placeholder="Contraseña" name="paswordadmin" required>
         <br>
-        <button>Iniciar Sesion</button>
+        <button  type="submit" name="Ingresar" value="Ingresar">Iniciar Sesion</button>
         <div class="imagen">
           <img src="../Administrador/upload/gato.png" alt="" width="550vw" height="550vw">
         </div>
