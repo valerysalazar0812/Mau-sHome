@@ -22,10 +22,10 @@ $modulo = $_REQUEST['modulo'] ?? '';
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>SportsWearline</title>
+  <title>Mau-s Home</title>
 
   <!-- Google Font: Source Sans Pro -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
   <!-- Font Awesome -->
   <link rel="stylesheet" href="../plugins/fontawesome-free/css/all.min.css">
   <!-- Ionicons -->
@@ -49,6 +49,9 @@ $modulo = $_REQUEST['modulo'] ?? '';
   <link rel="stylesheet" href="../plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
   <link rel="stylesheet" href="../plugins/datatables-buttons/css/buttons.bootstrap4.min.css"> 
   <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="./Css/Login.css">
+
+
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
@@ -92,8 +95,8 @@ $modulo = $_REQUEST['modulo'] ?? '';
       <!-- Brand Logo -->
       <a href="#" class="brand-link">
         <!--poner logo-->
-        <img src="../dist/img/logo.jpg" alt="Sports Wearline" class="brand-image img-circle elevation-1" style="opacity: .8" >
-        <span class="brand-text font-weight-light"></span><b style="color:red">Sports</b><b style="color:white">Wearline</b>
+        <span class="brand-text font-weight-light"></span><h2 class="arregloMau">Mau's Home</h2>
+
       </a>
 
       <!-- Sidebar -->
@@ -354,10 +357,10 @@ $modulo = $_REQUEST['modulo'] ?? '';
       });
     });
   </script>
-  <footer class="main-footer" style="background:radial-gradient(circle at 24.1% 68.8%, rgb(50, 50, 50) 0%, rgb(0, 0, 0) 99.4%)">
-    <strong>SportsWearline &copy; 2022-2023 <a href="../index1.php" target="_blank" style="color:white">Tienda Virtual Aqui.</a></strong>
+  <footer class="main-footer" style=" background:#d100ff5c;">
+    <strong style="color:black; font-family: Poppins;">Tienda virtual para mascotas &copy; 2022-2023</strong>
     <div class="float-right d-none d-sm-inline-block">
-      <b style="color:red">SportsWearline</b>
+    <h2 class="arregloMau2">Mau's Home</h2>
     </div>
   </footer>
 </body>

@@ -24,7 +24,7 @@
 </head>
 
 <body class="hold-transition login-page" style="background-color: white;">
-  <div class="video">
+  <div class="video2">
     <video muted autoplay loop class="video">
       <source src="../Administrador/upload/pexels-kampus-production-8731064.mp4" type="video/mp4">
     </video>
@@ -52,7 +52,7 @@
           } else {
         ?>
             <center>
-              <div class="alert alert-danger" role="alert">Administrador no reconocido</div>
+              <div class="alert alert-danger color155" role="alert">Administrador no reconocido</div>
             </center>
         <?php
           }
@@ -71,7 +71,7 @@
         <br>
         <button  type="submit" name="Ingresar" value="Ingresar">Iniciar Sesion</button>
         <div class="imagen">
-          <!-- <img src="../Administrador/upload/gato.png" alt="" width="550vw" height="550vw"> -->
+          <img src="../Administrador/upload/perro.png" alt="" width="290vw" height="450vw">
         </div>
 
       </form>
