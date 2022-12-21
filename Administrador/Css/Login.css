@@ -1,8 +1,13 @@
 /* fonts  */
 @import url('https://fonts.googleapis.com/css?family=Abel|Aguafina+Script|Artifika|Athiti|Condiment|Dosis|Droid+Serif|Farsan|Gurajada|Josefin+Sans|Lato|Lora|Merriweather|Noto+Serif|Open+Sans+Condensed:300|Playfair+Display|Rasa|Sahitya|Share+Tech|Text+Me+One|Titillium+Web');
 
+
+*{
+	font-family: 'Poppins';
+  }
+
+  
 body {
-/* 	background-image: linear-gradient(to top, #cd9cf2 0%, #f6f3ff 100%); */
 	background-attachment: fixed;
 	background-size:cover;
 	margin: 0;
@@ -55,7 +60,7 @@ body {
 	letter-spacing: 2px;
 	font-size: 3.5em;
 	margin: 0;
-
+	margin-top: 13%;
 	
 	
 }

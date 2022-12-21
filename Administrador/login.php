@@ -18,6 +18,8 @@
   <!-- Theme style -->
   <link rel="stylesheet" href="../dist/css/adminlte.min.css">
   <link rel="stylesheet" href="./Css/Login.css">
+  <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+  
 
 </head>
 
@@ -28,22 +30,19 @@
     </video>
   </div>
       <div id="container" class="tamano">
+
+        <!-- Inicio de sesion -->
+
     <?php
         if (isset($_REQUEST['Ingresar'])) {
           session_start();
           $email = $_REQUEST['emailadmin'] ?? '';
           $passwordd = $_REQUEST['paswordadmin'] ?? '';
-          // $pasword = $_POST['paswordadmin'];
-          // $pasword = sha1($_POST['paswordadmin']);
-
+          // $pasword = sha1($_POST['paswordadmin']); Verificar contraseñas encriptadas par BD
           include_once "Basedata.php";
-
           $con = mysqli_connect($host, $user, $pasword, $db);
-
           $query = "SELECT Idadmin, emailadmin, nombreadmin  from administradores where emailadmin= '" . $email . "'  and paswordadmin= '" . $passwordd . "' ";
-
           $res = mysqli_query($con, $query);
-          //  $paswordd = md5 ($passwordd);   Metodo opcional contraseña encriptada para evitar hackeos.
           $row = mysqli_fetch_assoc($res);
           if ($row) {
             $_SESSION['Idadmin'] = $row['Idadmin'];
@@ -53,12 +52,15 @@
           } else {
         ?>
             <center>
-              <div class="alert alert-danger" role="alert">Verifica tu correo o contraseña</div>
+              <div class="alert alert-danger" role="alert">Administrador no reconocido</div>
             </center>
         <?php
           }
         }
         ?>
+          <!-- Inicio de sesion -->
+
+        
       <h2>Mau's Home</h2>
       <p>Iniciar Sesion</p>
       <form>
@@ -69,7 +71,7 @@
         <br>
         <button  type="submit" name="Ingresar" value="Ingresar">Iniciar Sesion</button>
         <div class="imagen">
-          <img src="../Administrador/upload/gato.png" alt="" width="550vw" height="550vw">
+          <!-- <img src="../Administrador/upload/gato.png" alt="" width="550vw" height="550vw"> -->
         </div>
 
       </form>
