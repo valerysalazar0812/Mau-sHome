@@ -20,16 +20,20 @@ body {
 	height: 300px;
 	width: 480px;
 	padding: 1em;
-	
+	padding-right: 20%;
 	position: fixed;
 	bottom: 0;
 	right: 0;
 	left: -57%;
-	top: 0;	
-	
-	
+	top: 20%;		
 }
-
+.tamano {
+    width: 40% !important;
+    height: 50% !important;
+}
+.imagen{
+	margin-left: 111%;
+}
 #container h2 {
 	background: url(https://static.pexels.com/photos/5782/nature-flowers-vintage-plant.jpg);
 		/*   الكود المسؤال عن اضافة شفافية للنص */

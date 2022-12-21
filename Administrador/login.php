@@ -6,8 +6,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Login</title>
   <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -18,14 +18,14 @@
   <!-- Theme style -->
   <link rel="stylesheet" href="../dist/css/adminlte.min.css">
   <link rel="stylesheet" href="./Css/Login.css">
-  
+
 </head>
 
 <body class="hold-transition login-page" style="background-color: white;">
-<div id="particles-js"></div>
+  <div id="particles-js"></div>
   <div class="login-box">
     <div class="login-logo">
-      <p><strong><a style="color: red"> <b>Sports</b></a><b style ="color:white;">Wearline</b></strong>
+      <p><strong><a style="color: red"> <b>Sports</b></a><b style="color:white;">Wearline</b></strong>
     </div>
     <!-- /.login-logo -->
     <div class="card">
@@ -40,7 +40,7 @@
           $passwordd = $_REQUEST['paswordadmin'] ?? '';
 
 
-        
+
           $pasword = $_POST['paswordadmin'];
           $pasword = sha1($_POST['paswordadmin']);
 
@@ -60,13 +60,15 @@
             header("location: Panel.php");
           } else {
         ?>
-            <center><div class="alert alert-danger" role="alert">Verifica tu correo o contraseña</div></center>
-            
+            <center>
+              <div class="alert alert-danger" role="alert">Verifica tu correo o contraseña</div>
+            </center>
+
         <?php
           }
         }
         ?>
-       <form method="post">
+        <form method="post">
           <div class="input-group mb-3">
             <input type="email" class="form-control" placeholder="Correo" name="emailadmin">
             <div class="input-group-append">
@@ -84,32 +86,36 @@
             </div>
           </div>
           <div class="row">
-                        <!-- ingresar comienzo -->
+            <!-- ingresar comienzo -->
             <input type="submit" class="btn btn-secondary btn-lg btn-block btn btn-dark" name="Ingresar" value="Ingresar">
-      </form>               
+        </form>
+      </div>
+      <center><a href="../empleados/login2.php" type="button" class="btn btn-outline-info"><b>Ingresar Empleado</b></a></center>
     </div>
-    <center><a href="../empleados/login2.php" type="button" class="btn btn-outline-info"><b>Ingresar Empleado</b></a></center>
-  </div>
-  <div id="container">
-	<h2>Mau's Home</h2>
-	<p>Iniciar Sesion</p>
-	<form>
-		<input type="email" placeholder="Correo electronico" required>
-			<br>
-		<br>
-		<input type="email" placeholder="Contraseña" required>
-		<br>
-		<button>Iniciar Sesion</button>
-	</form>
-</div>
-<!-- Button trigger modal -->
-  <!-- /.login-box -->
+    <div id="container" class="tamano">
+      <div class="imagen">
+      <img src="../Administrador/upload/gato.png" alt="">
+      </div>
+      <h2>Mau's Home</h2>
+      <p>Iniciar Sesion</p>
+      <form>
+        <input type="email" placeholder="Correo electronico" required>
+        <br>
+        <br>
+        <input type="email" placeholder="Contraseña" required>
+        <br>
+        <button>Iniciar Sesion</button>
+      </form>
+    </div>
+    <!-- Button trigger modal -->
+    <!-- /.login-box -->
 
-  <!-- jQuery -->
-  <script src="../plugins/jquery/jquery.min.js"></script>
-  <!-- Bootstrap 4 -->
-  <script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <!-- AdminLTE App -->
-  <script src="../dist/js/adminlte.min.js"></script>
+    <!-- jQuery -->
+    <script src="../plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="../dist/js/adminlte.min.js"></script>
 </body>
+
 </html>
