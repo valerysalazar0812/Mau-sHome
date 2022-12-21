@@ -23,7 +23,7 @@
 
 <body class="hold-transition login-page" style="background-color: white;">
   <div class="video">
-    <video muted autoplay loop width="100%" >
+    <video muted autoplay loop class="video">
       <source src="../Administrador/upload/pexels-kampus-production-8731064.mp4" type="video/mp4">
     </video>
   </div>
