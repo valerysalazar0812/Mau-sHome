@@ -23,54 +23,18 @@
 
 <body class="hold-transition login-page" style="background-color: white;">
   <div class="video">
-    <video muted autoplay loop width="100%" height="100%">
+    <video muted autoplay loop width="100%" >
       <source src="../Administrador/upload/pexels-kampus-production-8731064.mp4" type="video/mp4">
     </video>
   </div>
-  <div id="particles-js"></div>
-  <div class="login-box">
-    <div class="login-logo">
-      <p><strong><a style="color: red"> <b>Sports</b></a><b style="color:white;">Wearline</b></strong>
-    </div>
-    <!-- /.login-logo -->
-    <div class="card">
-      <div class="card-body login-card-body">
-        <center><b style="color:black">BIENVENIDOS</b></center>
-        <p class="login-box-msg"><b>Ingresar sesion</b></p>
-
-        <form method="post">
-          <div class="input-group mb-3">
-            <input type="email" class="form-control" placeholder="Correo" name="emailadmin">
-            <div class="input-group-append">
-              <div class="input-group-text">
-                <span class="fas fa-envelope"></span>
-              </div>
-            </div>
-          </div>
-          <div class="input-group mb-3">
-            <input type="password" class="form-control" placeholder="Contraseña" name="paswordadmin">
-            <div class="input-group-append">
-              <div class="input-group-text">
-                <span class="fas fa-lock"></span>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <!-- ingresar comienzo -->
-            <input type="submit" class="btn btn-secondary btn-lg btn-block btn btn-dark" name="Ingresar" value="Ingresar">
-        </form>
-      </div>
-      <center><a href="../empleados/login2.php" type="button" class="btn btn-outline-info"><b>Ingresar Empleado</b></a></center>
-    </div>
-    <div id="container" class="tamano">
-
+      <div id="container" class="tamano">
     <?php
         if (isset($_REQUEST['Ingresar'])) {
           session_start();
           $email = $_REQUEST['emailadmin'] ?? '';
           $passwordd = $_REQUEST['paswordadmin'] ?? '';
-          $pasword = $_POST['paswordadmin'];
-          $pasword = sha1($_POST['paswordadmin']);
+          // $pasword = $_POST['paswordadmin'];
+          // $pasword = sha1($_POST['paswordadmin']);
 
           include_once "Basedata.php";
 
@@ -91,7 +55,6 @@
             <center>
               <div class="alert alert-danger" role="alert">Verifica tu correo o contraseña</div>
             </center>
-
         <?php
           }
         }
@@ -108,8 +71,11 @@
         <div class="imagen">
           <img src="../Administrador/upload/gato.png" alt="" width="550vw" height="550vw">
         </div>
-      </form>
 
+      </form>
+<!-- </div>
+      <center><a href="../empleados/login2.php" type="button" class="btn btn-outline-info"><b>Ingresar Empleado</b></a></center>
+    </div> -->
     </div>
     <!-- Button trigger modal -->
     <!-- /.login-box -->
