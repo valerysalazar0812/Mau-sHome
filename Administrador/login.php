@@ -17,10 +17,10 @@
   <link rel="stylesheet" href="../plugins/icheck-bootstrap/icheck-bootstrap.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="../dist/css/adminlte.min.css">
-  <link rel="stylesheet" href="Css/Particles.css">
+  
 </head>
 
-<body class="hold-transition login-page" style="background-color: black;">
+<body class="hold-transition login-page" style="background-color: white;">
 <div id="particles-js"></div>
   <div class="login-box">
     <div class="login-logo">
@@ -83,8 +83,7 @@
             </div>
           </div>
           <div class="row">
-
-            <!-- ingresar comienzo -->
+                        <!-- ingresar comienzo -->
             <input type="submit" class="btn btn-secondary btn-lg btn-block btn btn-dark" name="Ingresar" value="Ingresar">
       </form>               
     </div>
@@ -99,8 +98,5 @@
   <script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
   <!-- AdminLTE App -->
   <script src="../dist/js/adminlte.min.js"></script>
-  <script src="Js/particles.js"></script>
-<script src="Js/particulas.js"></script>
 </body>
-
 </html>

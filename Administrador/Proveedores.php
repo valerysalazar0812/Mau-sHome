@@ -57,7 +57,7 @@ echo '<meta http-equiv= "refresh" content="0; url=Panel.php?modulo=Proveedores&m
   }
 }
 ?>
-<div class="content-wrapper" style="background-color: black;">
+<div class="content-wrapper" style="background-color: white;">
   <!-- Content Header (Page header) -->
   <section class="content-header">
     <div class="container-fluid">

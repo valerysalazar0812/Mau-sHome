@@ -48,10 +48,11 @@ $modulo = $_REQUEST['modulo'] ?? '';
    <link rel="stylesheet" href="../plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
   <link rel="stylesheet" href="../plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
   <link rel="stylesheet" href="../plugins/datatables-buttons/css/buttons.bootstrap4.min.css"> 
+  <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
-  <div class="wrapper">
+  <div class="wrapper os-content">
 
     <!-- Preloader -->
     <div class="preloader flex-column justify-content-center align-items-center">

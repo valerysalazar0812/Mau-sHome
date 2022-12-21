@@ -57,7 +57,7 @@ echo '<meta http-equiv= "refresh" content="0; url=Panel.php?modulo=Productos&men
   }
 }
 ?>
-<div class="content-wrapper"  style="background-color: black;" >
+<div class="content-wrapper"  style="background-color: white;" >
   <!-- Content Header (Page header) -->
   <section class="content-header">
     <div class="container-fluid">
@@ -94,12 +94,11 @@ echo '<meta http-equiv= "refresh" content="0; url=Panel.php?modulo=Productos&men
                     <th>Nombre</th>
                     <th>Precio</th>
                     <th>Cantidad</th>
-                    <th>Talla</th>
                     <th>Descripción</th>
                     <th>Imagen</th>
                     <th>Proveedor</th>
                     <th>Estado</th>
-                    <th>Funciones<font size=2></font></th>
+                    <th>Funciones</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -116,7 +115,6 @@ echo '<meta http-equiv= "refresh" content="0; url=Panel.php?modulo=Productos&men
                      <td><?php echo $row['nombre'] ?></td> 
                      <td><?php echo number_format($row['precio'],2);?></td>
                      <td><?php echo $row['cantidad'] ?></td>
-                     <td><?php echo $row['talla'] ?></td>
                      <td><?php echo $row['descripcion'] ?></td>
                      <td> <center><?php echo "<img width='80' height='80' src='/Admin/Administrador/upload/".$row['imagen']."'>"?></center> </td>
                      <td><?php echo $row['proveedor'] ?></td>
@@ -139,7 +137,7 @@ echo '<meta http-equiv= "refresh" content="0; url=Panel.php?modulo=Productos&men
                               <?php
                               }
                               ?>
-                       <td>
+                       <font size=2><td>
                           <a href="Panel.php?modulo=EditarP&Id= <?php echo $row['Id'] ?> " style="margin: 8px "><i class="fas fa-pencil-alt" title="Editar Usuario"></i></a>
 
                           <a href="Panel.php?modulo=Productos&IdEstado1= <?php echo $row['Id'] ?> " class="btn btn-md" style="color:green;"><i class="fas fa-check" aria-hidden="true" title="Activo"></i></a>
@@ -148,7 +146,7 @@ echo '<meta http-equiv= "refresh" content="0; url=Panel.php?modulo=Productos&men
 
                           <a href="Panel.php?modulo=Productos&IdBorrar= <?php echo $row['Id'] ?> " class="text-danger borrar"><i class="fas fa-trash-alt" title="Eliminar"></i></a>
 
-                      </td>
+                      </td></font>
                     </tr>
                   <?php
                   }
