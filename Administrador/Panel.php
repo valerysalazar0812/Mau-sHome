@@ -50,6 +50,7 @@ $modulo = $_REQUEST['modulo'] ?? '';
   <link rel="stylesheet" href="../plugins/datatables-buttons/css/buttons.bootstrap4.min.css"> 
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="./Css/Login.css">
+  <link rel="stylesheet" href="./Css/Entradas.css">
 
 
 </head>
@@ -141,6 +142,15 @@ $modulo = $_REQUEST['modulo'] ?? '';
                   <a href="Panel.php?modulo=Estadisticas" class="nav-link <?php echo ($modulo == "Estadisticas" || $modulo == "") ? "active" : " "; ?>">
                   <i class="fa fa-signal" aria-hidden="true"></i>
                     <p>Estadisticas</p>
+                  </a>
+                </li>
+              </ul>
+              <ul class="nav nav-treeview">
+                <li class="nav-item">
+                  <!-- Al dar a un clic de usuario o ventas se active -->
+                  <a href="Panel.php?modulo=Inicio" class="nav-link <?php echo ($modulo == "Inicio" || $modulo == "") ? "active" : " "; ?>">
+                  <i class="fa fa-signal" aria-hidden="true"></i>
+                    <p>Inicio</p>
                   </a>
                 </li>
               </ul>
@@ -270,6 +280,9 @@ $modulo = $_REQUEST['modulo'] ?? '';
     }
     if($modulo == "Editarempleado"){
       include_once "Editarempleado.php";
+    }
+    if ($modulo == "Inicio"){
+      include_once "Inicio.php";
     }
     ?>
     <!-- /.content-wrapper -->
