@@ -19,9 +19,7 @@ if (isset($_REQUEST['guardar'])) {
   $precio = mysqli_real_escape_string($con, $_REQUEST['precio'] ?? '');
   $cantidad = mysqli_real_escape_string($con, $_REQUEST['cantidad'] ?? '');
   // RESPUESTA DEL SELECT DE LA TALLA
-  $rtalla = $_REQUEST['talla'];
   // EL IMPLODE SE ENCARGA DE RECOGER TODOS LOS DATOS QUE SE ESCOGIERON Y ORDENARLOS CADA UNO MEDIANTE LA COMA (", ") SIEMPRE Y CUANDO SE ESCOGA MAS DE UN DATO
-  $talla = implode(', ', $rtalla);
   $descripcion = mysqli_real_escape_string($con, $_REQUEST['descripcion'] ?? '');
   $proveedor = mysqli_real_escape_string($con, $_REQUEST['proveedor'] ?? '');
 
@@ -31,13 +29,13 @@ if (isset($_REQUEST['guardar'])) {
   $name_image = $_FILES['imagen']['name'];
   $type_image = $_FILES['imagen']['type'];
   $name_size = $_FILES['']['size'];
-  $destino = $_SERVER['DOCUMENT_ROOT'] . '/Admin/Administrador/upload/';
+  $destino = $_SERVER['DOCUMENT_ROOT'] . '/Mau-sHome/Administrador/upload/';
   $ruta = $destino . $name_image;
   move_uploaded_file($_FILES['imagen']['tmp_name'], $destino . $name_image);
 
   // </SUBIR IMAGENES>
 
-  $query = "INSERT INTO productos (nombre, precio, cantidad,talla, descripcion, imagen, proveedor, estado) VALUES ('" . $nombre . "' , '" . $precio . "' , '" . $cantidad . "' , '" . $talla . "' , '" . $descripcion . "' ,'"  . $name_image . "' , '" . $proveedor . "', '1');";
+  $query = "INSERT INTO productos (nombre, precio, cantidad, descripcion, imagen, proveedor, estado) VALUES ('" . $nombre . "' , '" . $precio . "' , '" . $cantidad . "' , '" . $descripcion . "' ,'"  . $name_image . "' , '" . $proveedor . "', '1');";
   //resultados
   $res = mysqli_query($con, $query);
 

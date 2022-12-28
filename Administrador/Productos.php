@@ -129,7 +129,7 @@ if (isset($_REQUEST['IdEstado2'])) {
                       <td><?php echo number_format($row['precio'], 2); ?></td>
                       <td><?php echo $row['cantidad'] ?></td>
                       <td><?php echo $row['descripcion'] ?></td>
-                      <td><button id="btn-abrir-popup" class="btn-abrir-popup">Ver imagen</button></td>
+                      <td><?php echo $row['imagen'] ?><button id="btn-abrir-popup" class="btn-abrir-popup">Ver imagen</button></td>
                       <!-- <td> <center><?php // echo "<img width='80' height='80' src='/Admin/Administrador/upload/".$row['imagen']."'>"
                                         ?></center> </td> -->
                       <td><?php echo $row['proveedor'] ?></td>
@@ -163,7 +163,6 @@ if (isset($_REQUEST['IdEstado2'])) {
                           <a href="Panel.php?modulo=Productos&IdEstado2= <?php echo $row['Id'] ?> " class="btn btn-md" style="color:red;"><i class="fas fa-minus" aria-hidden="true" title="Inactivo"></i></a>
 
                           <a href="Panel.php?modulo=Productos&IdBorrar= <?php echo $row['Id'] ?> " class="text-danger borrar"><i class="fas fa-trash-alt" title="Eliminar"></i></a>
-
                         </td>
                       </font>
                     </tr>
@@ -175,7 +174,19 @@ if (isset($_REQUEST['IdEstado2'])) {
               <div class="overlay" id="overlay">
                 <div class="popup" id="popup">
                   <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
-                  <?php echo "<img width='' height='80' src='/Admin/Administrador/upload/" . $row['imagen'] . "'>"  ?>
+                  <?php
+                  include_once "Basedata.php";
+                  $con = mysqli_connect($host, $user, $pasword, $db);
+                  $query = "SELECT imagen FROM productos;";
+                  $res = mysqli_query($con, $query);
+                  while ($row = mysqli_fetch_assoc($res)) {
+                  ?>
+                    <tr>
+                    <?php echo "<img width='80' height='80' src='/Mau-sHome/Administrador/upload/".$row['imagen']."'>"?></tr>
+                    <?php
+                  }
+                  ?>
+                  <?php echo "Entra" ?>
                   </form>
                 </div>
               </div>
