@@ -1,4 +1,4 @@
-<?php
+<?php 
 include_once "Basedata.php";
 $con = mysqli_connect($host, $user, $pasword, $db);
 if(isset($_REQUEST['IdEstado1'])){
