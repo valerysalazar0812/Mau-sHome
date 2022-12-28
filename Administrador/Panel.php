@@ -108,22 +108,9 @@ $modulo = $_REQUEST['modulo'] ?? '';
             <img src="../dist/img/fondo.jpg" class="img-circle elevation-2" alt="User Image">
           </div>
           <div class="info">
-            <a href="#" class="d-block"><?php echo $_SESSION['nombreadmin']; ?></a>
+            <a href="Panel.php?modulo=Editaradmin&Idadmin= <?php echo $_SESSION['Idadmin'] ?>" class="d-block" title="Editar mi perfil"><?php echo $_SESSION['nombreadmin']; ?> </a>
           </div>
         </div>
-
-        <!-- SidebarSearch Form -->
-        <div class="form-inline">
-          <div class="input-group" data-widget="sidebar-search">
-            <input class="form-control form-control-sidebar" type="search" placeholder="Buscar" aria-label="Search">
-            <div class="input-group-append">
-              <button class="btn btn-sidebar">
-                <i class="fas fa-search fa-fw"></i>
-              </button>
-            </div>
-          </div>
-        </div>
-
         <!-- Sidebar Menu -->
         <nav class="mt-2">
           <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
@@ -133,7 +120,7 @@ $modulo = $_REQUEST['modulo'] ?? '';
               <a href="#" class="nav-link active">
                 <i class="fas fa-shopping-cart nav-icon" adian-hidden="true"></i>
                 <p>
-                  SportsWearline
+                  Mau's Home 
                 </p>
               </a>
               <ul class="nav nav-treeview">
@@ -283,6 +270,9 @@ $modulo = $_REQUEST['modulo'] ?? '';
     }
     if ($modulo == "Inicio"){
       include_once "Inicio.php";
+    }
+    if ($modulo == "Imagen"){
+      include_once "image.php";
     }
     ?>
     <!-- /.content-wrapper -->

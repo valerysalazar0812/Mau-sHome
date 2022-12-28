@@ -6,15 +6,7 @@
   <link rel="stylesheet" href="Css/Boton.css">
   <link rel="stylesheet" href="Css/Fondo.css">
   <!-- ACOMODA EL CUADRITO DE ELEGIR ARCHIVOS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"> 
-  <!-- <link href="https://getbootstrap.com/docs/5.2/assets/css/docs.css" rel="stylesheet"> -->
-  <!-- ACOMODA EL SELECT MULTIPLE -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script> 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.8.1/css/bootstrap-select.css">
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.8.1/js/bootstrap-select.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
 <?php
@@ -27,9 +19,9 @@ if (isset($_REQUEST['guardar'])) {
   $precio = mysqli_real_escape_string($con, $_REQUEST['precio'] ?? '');
   $cantidad = mysqli_real_escape_string($con, $_REQUEST['cantidad'] ?? '');
   // RESPUESTA DEL SELECT DE LA TALLA
-  $rtalla = $_REQUEST['talla']; 
+  $rtalla = $_REQUEST['talla'];
   // EL IMPLODE SE ENCARGA DE RECOGER TODOS LOS DATOS QUE SE ESCOGIERON Y ORDENARLOS CADA UNO MEDIANTE LA COMA (", ") SIEMPRE Y CUANDO SE ESCOGA MAS DE UN DATO
-  $talla = implode(', ' , $rtalla);
+  $talla = implode(', ', $rtalla);
   $descripcion = mysqli_real_escape_string($con, $_REQUEST['descripcion'] ?? '');
   $proveedor = mysqli_real_escape_string($con, $_REQUEST['proveedor'] ?? '');
 
@@ -51,17 +43,16 @@ if (isset($_REQUEST['guardar'])) {
 
   if ($res) {
     echo '<meta http-equiv= "refresh" content="0; url=Panel.php?modulo=Productos&mensaje=Producto ' . $nombre . '  creado correctamente" />';
-  } 
-  else {
-  ?>
+  } else {
+?>
     <div class="alert alert-danger" role="alert">
       Error al agregar producto <?php echo mysqli_error($con) ?>
     </div>
-  <?php
-    }
+<?php
   }
-  ?>
-  
+}
+?>
+
 <div class="content-wrapper">
   <!-- Content Header (Page header) -->
   <section class="content-header">
@@ -92,38 +83,40 @@ if (isset($_REQUEST['guardar'])) {
                 </div>
 
                 <div>
-                <label>Precio</label>
-                <input type="number" name="precio" class="form-control precios" id="precio" required="" pattern="[0-9]+" min="5">
+                  <label>Precio</label>
+                  <input type="number" name="precio" class="form-control precios" id="precio" required="" pattern="[0-9]+" min="5">
                   <input type="image" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/14/Dollar_Sign.svg/1200px-Dollar_Sign.svg.png" class="image_buscar">
                   <style>
                     input[type=number]::-webkit-inner-spin-button,
-                    input[type=number]::-webkit-outer-spin-button
-                    {
+                    input[type=number]::-webkit-outer-spin-button {
                       -webkit-appearance: none;
                       margin: 0;
                     }
-                    input.precios{
-                    width: 100%;
-                    position: relative;
-                    background: transparent;
-                    outline: none;
-                    bottom: 4px;
-                    padding: 2px;
-                    text-indent:20px;
-                  }
-                  input.image_buscar {
-                    margin-left: 5px;
-                    width: 15px;
-                    border: 4px;
-                    position:relative;
-                    top:-29px;
-                  }
-                  div.cantidad{
-                    margin-top:-20px;
-                    margin-left: -1px;
 
-                  }
-                </style>
+                    input.precios {
+                      width: 100%;
+                      position: relative;
+                      background: transparent;
+                      outline: none;
+                      bottom: 4px;
+                      padding: 2px;
+                      text-indent: 20px;
+                    }
+
+                    input.image_buscar {
+                      margin-left: 5px;
+                      width: 15px;
+                      border: 4px;
+                      position: relative;
+                      top: -29px;
+                    }
+
+                    div.cantidad {
+                      margin-top: -20px;
+                      margin-left: -1px;
+
+                    }
+                  </style>
                 </div>
                 <div class="for-group cantidad">
                   <label>Cantidad</label>
@@ -161,51 +154,6 @@ if (isset($_REQUEST['guardar'])) {
                     ?>
                   </select>
                 </div>
-                
-                <label>Talla(s)</label>
-                <div class="for-group" >
-                  <select class="selectpicker" multiple="" required="" name="talla[]" > 
-                    <option value="" disabled selected>Elegir tallas</option>
-                    <option value="No aplica">No aplica</option>  
-                    <option value="Talla Unica">Talla Unica</option>
-                    <optgroup label="Camisas">
-                        <option value="XS">XS</option>
-                        <option value="S">S</option>
-                        <option value="M">M</option>
-                        <option value="L">L</option>
-                        <option value="XL">XL</option>
-                    </optgroup>
-                    <optgroup label="Pantalones">
-                        <option value="6">6</option>
-                        <option value="8">8</option>
-                        <option value="10">10</option>
-                        <option value="12">12</option>
-                        <option value="14">14</option>
-                        <option value="16">16</option>
-                        <option value="18">18</option>
-                        <option value="20">20</option>
-                        <option value="28">28</option>
-                        <option value="30">30</option>
-                        <option value="32">32</option>
-                        <option value="34">34</option>
-                        <option value="36">36</option>
-                        <option value="38">38</option>
-                        <option value="40">40</option>
-                    </optgroup>
-                    <optgroup label="Zapatos">
-                        <option value="35">35</option>
-                        <option value="36">36</option>
-                        <option value="37">37</option>
-                        <option value="38">38</option>
-                        <option value="39">39</option>
-                        <option value="40">40</option>
-                        <option value="41">41</option>
-                        <option value="42">42</option>
-                        <option value="43">43</option>
-                    </optgroup>
-                  </select>
-                </div>
-
                 <div class="photo" style="width:450px">
                   <label>Imagen</label>
                   <input id="imagen" class="form-control" type="file" name="imagen" multiple="multiple" required="" accept="image/png, image/jpg, image/jpeg, image/pjpeg">
@@ -219,10 +167,10 @@ if (isset($_REQUEST['guardar'])) {
                 </center>
                 <a href="Panel.php?modulo=Productos"><i class="fas fa-reply-all fa-lg text-danger" aria-hidden="true" title="Regresar"></i></a>
             </div>
-            
-          </form>
-          
-        </div>
+
+            </form>
+
+          </div>
           <!-- /.card -->
 
         </div>

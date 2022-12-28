@@ -119,7 +119,6 @@ $row = mysqli_fetch_assoc($res);
                     div.cantidad{
                       margin-top:-20px;
                       margin-left: -1px;
-
                     }
                   </style>
 
@@ -129,20 +128,15 @@ $row = mysqli_fetch_assoc($res);
                   <input type="number" name="cantidad" class="form-control" required="" pattern="[0-9]+" maxlength="8" minlength="1" value="<?php echo $row['cantidad'] ?>">
                 </div>
                 <div class="for-group">
-                  <label>talla</label>
-                  <input type="text" name="talla" required="" class="form-control" value="<?php echo $row['talla'] ?>">
-                </div>
-                <div class="for-group">
                   <label>descripcion</label>
                   <input type="text" name="descripcion" class="form-control" value="<?php echo $row['descripcion'] ?>" maxlength="2000" minlength="9">
                 </div>
                 <div class="photo" style="width:100%">
-                  <label>Imagen(es)</label>
+                  <label>Imagen</label>
                   <input type="text" name="imagenname" class="form-control" value="<?php echo $row['imagen'] ?>" readonly>
                   <br>
                   <input type="file" class="form-control" name="imagen" accept="image/png, image/jpg, image/jpeg, image/pjpeg">
                 </div>
-                
               <hr>
               <div class="for-group">
                 <center>
@@ -155,7 +149,6 @@ $row = mysqli_fetch_assoc($res);
               </form>
             </div>
             <!-- LA CANTIDAD (EN EL FRONT) NO PUEDE SER MAYOR A LA CANTIDAD QUE HAY DE PORDUCTOS. ES DECIR NO SE PUEDE ESCOGER MAYOR CANTIDAD CIERTO PRODUCTO-->
-
           </div>
           <!-- /.col -->
         </div>

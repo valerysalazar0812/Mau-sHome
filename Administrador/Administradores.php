@@ -63,13 +63,12 @@ echo '<meta http-equiv= "refresh" content="0; url=Panel.php?modulo=Administrador
               </form>
              </div>
              <br>
-              <table  class="table table-bordered table-hover table_id">
-                
+              <table   class="table table-bordered table-hover table_id">
                 <thead>
                   <tr>
                     <th>Id</th>                
-                    <th>Nombre</th>
-                    <th>Apellido</th>
+                    <th>Nombre(s)</th>
+                    <th>Apelllido(s)</th>
                     <th>Email</th>
                     <th>Ciudad</th>
                     <th>Departamento</th>
