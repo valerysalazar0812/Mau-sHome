@@ -128,8 +128,8 @@ if (isset($_REQUEST['IdEstado2'])) {
                       ?>
                         <center>
                           <td>
-                            <button class="btn btn-success btn-xs">Activo</button>
-                            <a href="Panel.php?modulo=Productos&IdEstado2= <?php echo $row['Id'] ?> " class="btn btn-md" style="color:red;"><i class="fas fa-minus" aria-hidden="true" title="Inactivar"></i></a>
+                            <button class="btn btn-success btn-xs movim">Activo</button>
+                            <a href="Panel.php?modulo=Productos&IdEstado2= <?php echo $row['Id'] ?> " class="btn btn-md" style="color:red; margin-bottom: -17%;"><i class="fas fa-minus" aria-hidden="true" title="Inactivar"></i></a>
                         </td>
                         </center>
 
@@ -137,8 +137,8 @@ if (isset($_REQUEST['IdEstado2'])) {
                       } else {
                       ?>
                         <center>
-                          <td><button class="btn btn-danger btn-xs">Inactivo</button>
-                          <a href="Panel.php?modulo=Productos&IdEstado1= <?php echo $row['Id'] ?> " class="btn btn-md" style="color:green;"><i class="fas fa-check" aria-hidden="true" title="Activar"></i></a>
+                          <td><button class="btn btn-danger btn-xs ">Inactivo</button>
+                          <a href="Panel.php?modulo=Productos&IdEstado1= <?php echo $row['Id'] ?> " class="btn btn-md " style="color:green;"><i class="fas fa-check"  aria-hidden="true" title="Activar"></i></a>
                           </td>
                         </center>
                       <?php
