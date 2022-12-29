@@ -1,18 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./Css/Popup.css">
-</head>
-
-<body>
-
-</body>
-
-</html>
 <?php
 include_once "Basedata.php";
 $con = mysqli_connect($host, $user, $pasword, $db);
@@ -120,7 +106,6 @@ if (isset($_REQUEST['IdEstado2'])) {
                   $con = mysqli_connect($host, $user, $pasword, $db);
                   $query = "SELECT Id, nombre, precio, cantidad, talla, descripcion, imagen, proveedor, estado FROM productos;";
                   $res = mysqli_query($con, $query);
-
                   while ($row = mysqli_fetch_assoc($res)) {
                   ?>
                     <tr>
@@ -129,9 +114,9 @@ if (isset($_REQUEST['IdEstado2'])) {
                       <td><?php echo number_format($row['precio'], 2); ?></td>
                       <td><?php echo $row['cantidad'] ?></td>
                       <td><?php echo $row['descripcion'] ?></td>
-                      <td><?php echo $row['imagen'] ?><button id="btn-abrir-popup" class="btn-abrir-popup">Ver imagen</button></td>
-                      <!-- <td> <center><?php // echo "<img width='80' height='80' src='/Admin/Administrador/upload/".$row['imagen']."'>"
-                                        ?></center> </td> -->
+                      <td>
+                        <center><?php echo "<img width='80' height='80' src='/Admin/Administrador/upload/" . $row['imagen'] . "'>" ?></center>
+                      </td>
                       <td><?php echo $row['proveedor'] ?></td>
                       <?php
                       if (isset($_REQUEST['guardar'])) {
@@ -171,25 +156,7 @@ if (isset($_REQUEST['IdEstado2'])) {
                   ?>
                 </tbody>
               </table>
-              <div class="overlay" id="overlay">
-                <div class="popup" id="popup">
-                  <a href="#" id="btn-cerrar-popup" class="btn-cerrar-popup"><i class="fas fa-times"></i></a>
-                  <?php
-                  include_once "Basedata.php";
-                  $con = mysqli_connect($host, $user, $pasword, $db);
-                  $query = "SELECT imagen FROM productos;";
-                  $res = mysqli_query($con, $query);
-                  while ($row = mysqli_fetch_assoc($res)) {
-                  ?>
-                    <tr>
-                    <?php echo "<img width='80' height='80' src='/Mau-sHome/Administrador/upload/".$row['imagen']."'>"?></tr>
-                    <?php
-                  }
-                  ?>
-                  <?php echo "Entra" ?>
-                  </form>
-                </div>
-              </div>
+
             </div>
           </div>
           <!-- /.card-body -->
